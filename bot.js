@@ -1,11 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '*';
 client.on('ready', () => {
   client.user.setGame('*help | *invite','https://www.twitch.tv/peery13');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
 });
+
 client.on('message', message => {
         if (message.content.startsWith(prefix + "uptime")) {
     let ms = client.uptime;
@@ -74,7 +76,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-  
+
 if (message.content.startsWith(prefix + 'perm')) {
          if(!message.channel.guild) return;
          var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4);
@@ -103,14 +105,14 @@ client.on('message', function(message) {
     }
 });
 
-	
+
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help-en") {
 		 message.channel.send('**The Message Was Sent On Private**');
-            
-	
-		 
+
+
+
 
 
  message.author.sendMessage(`
@@ -135,7 +137,7 @@ __~~The King Bot~~__ By: Peery#0609
  ❖ *kick <mention > ➾ kick member from server
 
  ❖ *clear ➾ clear chat ( not ready yet fixing)
- 
+
  ❖ *mute < mention > ➾ mute member
 
  ❖ *unmute <mention> ➾ unmute member
@@ -143,7 +145,7 @@ __~~The King Bot~~__ By: Peery#0609
  ❖ *ct <name> ➾ create channel
 
  ❖ *cv <name> create voice channel
-  
+
  ❖ *bc <message> ➾ message all members in server
 
 
@@ -151,7 +153,7 @@ __~~The King Bot~~__ By: Peery#0609
             General  Commands
 ╚[❖════════════❖]╝
 
-❖ *roll <number> ➾ role 
+❖ *roll <number> ➾ role
 
 ❖ *date ➾ see date
 
@@ -175,9 +177,9 @@ __~~The King Bot~~__ By: Peery#0609
 
 ❖ *ping ➾ to see ping
 
-❖ *bot ➾ bot informations 
+❖ *bot ➾ bot informations
 
-❖ *server ➾ server informations 
+❖ *server ➾ server informations
 
 ❖ *invite ➾ bot invite link
 
@@ -190,11 +192,11 @@ to enable welcome message do channel name "wlc"
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
+Server support: https://discord.gg/HxQSzzM
 
 ==================================================================
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=473573300304347147&permissions=8&scope=bot
 
 ==================================================================
 
@@ -208,9 +210,9 @@ client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help-ar") {
 		 message.channel.send('**تم ارسالك في الخاص**');
-            
-	
-		 
+
+
+
 
 
  message.author.sendMessage(`
@@ -233,8 +235,8 @@ __~~The King Bot~~__ By: Peery#0609
 ╚[❖════════════❖]╝
 
  ❖  *kick <mention > ➾ لطرد عضو
- 
- ❖ *mute < mention > ➾ اسكات عضو 
+
+ ❖ *mute < mention > ➾ اسكات عضو
 
  ❖ *clear  ➾ لتنضيف المحادثة (fixing)
 
@@ -243,7 +245,7 @@ __~~The King Bot~~__ By: Peery#0609
  ❖ *ct <name> ➾ صنع روم كتابية
 
  ❖ *unmute <mention> ➾ فك الاسكات من العضو
-  
+
  ❖ *bc <message> ➾ لارسال رسالة لجميع اعضاء السيرفر
 
 
@@ -289,9 +291,9 @@ __~~The King Bot~~__ By: Peery#0609
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
+Server support: https://discord.gg/HxQSzzM
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=473573300304347147&permissions=8&scope=bot
 
 ==================================================================
 
@@ -331,7 +333,7 @@ client.on('message', message => {
 
 
  message.author.sendMessage(`
- 
+
  __~~Bot Staff~~__
  ╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱╭╮
 ╭╯╰┫┃╱╱╱╱┃┃┃╭╯╱╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮
@@ -342,11 +344,8 @@ client.on('message', message => {
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
 
- __Powered By__: Peery#0609
 
-Server Support : https://discord.gg/twdHNJT
-
-https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+Server Support : https://discord.gg/HxQSzzM
 `);
 
 message.channel.send('**تم الارسال في الخاص**');
@@ -369,12 +368,12 @@ client.on('message', message => {
 ╱╰━┻╯╰┻━━┻╯╰━┻┻╯╰┻━╮┣━━━┻━━┻━╯
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
- 
+
 بامكانك دعوة البوت من هنا
 
-https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+https://discordapp.com/api/oauth2/authorize?client_id=473573300304347147&permissions=8&scope=bot
 
-Server Support : https://discord.gg/twdHNJT
+Server Support : https://discord.gg/HxQSzzM
 `);
 
 message.channel.send('**تم الارسال في الخاص**');
@@ -425,13 +424,13 @@ client.on('message', message => {
                 m.send(`${m}`,{embed: bc});
             });
             const AziRo = new Discord.RichEmbed()
-            .setAuthor(message.author.username, message.author.avatarURL)   
-            .setTitle('✔️ | جاري ارسال رسالتك ') 
+            .setAuthor(message.author.username, message.author.avatarURL)
+            .setTitle('✔️ | جاري ارسال رسالتك ')
             .addBlankField(true)
-            .addField('👥 | عدد الاعضاء المرسل لهم ', message.guild.memberCount , true)        
+            .addField('👥 | عدد الاعضاء المرسل لهم ', message.guild.memberCount , true)
             .addField('📋| الرسالة ', args)
-            .setColor('RANDOM')  
-            message.channel.sendEmbed(AziRo);          
+            .setColor('RANDOM')
+            message.channel.sendEmbed(AziRo);
         }
         } else {
             return;
@@ -492,7 +491,7 @@ client.on("message", message => {
 
 };
     if (command === "*unmute") {
-          if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
+          if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **");
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'console');
@@ -523,12 +522,12 @@ client.on("message", message => {
 });
 
 
-client.on("message", message => {    
+client.on("message", message => {
           if(!message.channel.guild) return;
    if(message.author.bot) return;
-      if(message.content === "*ser-av"){ 
+      if(message.content === "*ser-av"){
           const embed = new Discord.RichEmbed()
-  
+
       .setTitle(`صورة ** ${message.guild.name} **`)
   .setAuthor(message.author.username, message.guild.iconrURL)
     .setColor('RANDOM')
@@ -562,15 +561,15 @@ m.sendMessage(args)
 })
 }
 })
-    
-            
-	     
+
+
+
 client.on('message', message => {
               if (!message.channel.guild) return;
       if(message.content =='*member')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
-      .setFooter(message.author.username, message.author.avatarURL) 
+      .setFooter(message.author.username, message.author.avatarURL)
       .setTitle('🌷| Members info')
       .addBlankField(true)
       .addField('📗| Online',
@@ -580,14 +579,14 @@ client.on('message', message => {
       .addField('📓| Offline',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
       .addField('➡| Server Members',`${message.guild.memberCount}`)
       message.channel.send(IzRo);
-	
+
     });
 
 
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-	    
+
                         message.channel.send('**Choose**: *help-ar ➾ arabic | *help-en ➾ english');
 
     }
@@ -625,7 +624,7 @@ client.on('message', message => {
     }
 });
 
-  
+
 client.on("message", (message) => {
 if (message.content.startsWith("*ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
@@ -643,7 +642,7 @@ if (message.content.startsWith("*cv")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
     message.channel.sendMessage('تـم إنـشاء روم صـوتي')
-    
+
 }
 });
 
@@ -671,7 +670,7 @@ client.on('message', message => {
           var x5bzm = mentionned;
       } else {
           var x5bzm = message.author;
-          
+
       }
         const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
@@ -728,6 +727,5 @@ client.on("message", msg => {
           .addField(':robot:|Bot', `${msg.author.bot.toString().toUpperCase()}`, true);
       msg.channel.send({embed: embed})
   }
-});	
-
+});
 client.login(process.env.BOT_TOKEN);
